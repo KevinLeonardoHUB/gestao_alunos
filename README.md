@@ -1,32 +1,32 @@
-# Gestão de Alunos
+# Student Management
 
-Mini projeto em linguagem **C** para gestão simples de professores, alunos e notas.
+A small **C** project for managing teachers, students and grades.
 
-O programa funciona no terminal e permite que um professor faça registo/login, adicione alunos, registe notas, modifique notas e calcule a média de um aluno.
+The program runs in the terminal and allows a teacher to register and sign in, add students, record or update grades, and calculate a student's average grade.
 
-## Funcionalidades
+## Features
 
-- Registo de professores
-- Login de professores
-- Associação de professor a uma matéria
-- Adição de alunos à turma do professor
-- Registo de notas dos alunos
-- Modificação de notas
-- Cálculo da média do aluno
-- Guardar dados em ficheiro local
+- Teacher registration
+- Teacher sign-in
+- Association between a teacher and a subject
+- Adding students to a teacher's class
+- Recording student grades
+- Updating grades
+- Calculating a student's average grade
+- Saving data to a local file
 
-## Tecnologias usadas
+## Technologies
 
-- Linguagem C
-- Ficheiros `.c` e `.h`
-- Manipulação de ficheiros em C
-- Estruturas `struct`
+- C
+- `.c` and `.h` files
+- File handling in C
+- `struct` data structures
 - Arrays
-- Funções
+- Functions
 
-## Estrutura do projeto
+## Project structure
 
-```txt
+```text
 gestao-alunos/
 ├── main.c
 ├── funcoes.c
@@ -35,34 +35,34 @@ gestao-alunos/
 └── .gitignore
 ```
 
-## Como compilar
+## Build
 
-Com GCC instalado, usa o comando:
+With GCC installed, run:
 
 ```bash
 gcc main.c funcoes.c -o gestao_alunos
 ```
 
-## Como executar
+## Run
 
-No Windows:
+On Windows:
 
 ```bash
 gestao_alunos.exe
 ```
 
-No Linux ou macOS:
+On Linux or macOS:
 
 ```bash
 ./gestao_alunos
 ```
 
-## Observação
+## Data and privacy
 
-O ficheiro `dados_projeto.txt` é criado automaticamente quando o programa guarda os dados.
+The application creates `dados_projeto.txt` automatically when it saves data.
 
-Esse ficheiro não foi incluído no GitHub porque pode conter nomes, senhas e dados de alunos.
+This file is not included in the repository because it may contain names, passwords and student information.
 
-## Autor
+## Author
 
-Quévin Tavares
+**Quévin Tavares**
