@@ -1,68 +1,48 @@
 # Student Management
 
-A small **C** project for managing teachers, students and grades.
+A C terminal application for teachers to register, sign in, manage a class, record or update grades and calculate student averages. Data is saved between runs in a local text file.
 
-The program runs in the terminal and allows a teacher to register and sign in, add students, record or update grades, and calculate a student's average grade.
+## What it looks like
 
-## Features
-
-- Teacher registration
-- Teacher sign-in
-- Association between a teacher and a subject
-- Adding students to a teacher's class
-- Recording student grades
-- Updating grades
-- Calculating a student's average grade
-- Saving data to a local file
-
-## Technologies
-
-- C
-- `.c` and `.h` files
-- File handling in C
-- `struct` data structures
-- Arrays
-- Functions
-
-## Project structure
+The Portuguese menu after signing in:
 
 ```text
-gestao-alunos/
-├── main.c
-├── funcoes.c
-├── funcoes.h
-├── README.md
-└── .gitignore
+1. Adicionar Aluno à sua turma
+2. Adicionar Nota do aluno
+3. Modificar Nota do aluno
+4. Calcular Média do aluno
+5. Sair do portal
 ```
 
-## Build
+## Build and run
 
-With GCC installed, run:
+Install GCC, then run from this repository's root:
 
 ```bash
 gcc main.c funcoes.c -o gestao_alunos
-```
-
-## Run
-
-On Windows:
-
-```bash
-gestao_alunos.exe
-```
-
-On Linux or macOS:
-
-```bash
 ./gestao_alunos
 ```
 
-## Data and privacy
+On Windows with GCC/MinGW, build and run in PowerShell:
 
-The application creates `dados_projeto.txt` automatically when it saves data.
+```powershell
+gcc main.c funcoes.c -o gestao_alunos.exe
+.\gestao_alunos.exe
+```
 
-This file is not included in the repository because it may contain names, passwords and student information.
+## Try it
 
-## Author
+1. Choose **1. Registro**, enter a teacher name, a password and its confirmation.
+2. Choose a subject using one of the accepted values: `portugues`, `matematica`, `historia` or `edf`.
+3. Add a student, then add grades using the student's name.
+4. Choose **Calcular Média** to see the average, or **Modificar Nota** to correct a grade.
+5. Exit with option **5**. On the next run, choose **2. Login** with the same teacher credentials.
 
-**Quévin Tavares**
+## Relevant details
+
+- Uses C structs, arrays and file I/O; no external libraries are required.
+- Limits in `funcoes.h`: 5 teachers, 10 students per teacher and 5 grades per student.
+- `dados_projeto.txt` is created in the current working directory. Run from the same directory to reuse your data.
+- Passwords are stored as plain text. Use fictitious data and a test password; this is a learning project, not a production student-record system. Keep the generated data file out of version control.
+
+Created by **Quévin Tavares**.
